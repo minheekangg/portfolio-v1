@@ -1,28 +1,27 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, { Component, Fragment } from 'react';
 import './App.css';
+import { Route, Switch, Redirect, withRouter } from "react-router-dom";
+
+import Welcome from './components/welcome'
+import Work from './components/work'
+import Contact from './components/contact'
+import About from './components/about'
+import NavBar from './components/nav'
 
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+
+    return <Fragment>
+      <NavBar />
+      <Switch>
+        <Route exact path="/" render={() => <Redirect to="/welcome" />} />
+        <Route exact path="/welcome" component={Welcome} />
+        <Route exact path="/work" component={Work} />
+        <Route exact path="/contact" component={Contact} />
+        <Route exact path="/about" component={About} />
+      </Switch>
+    </Fragment>
   }
 }
 
-export default App;
+export default withRouter(App);
