@@ -4,7 +4,7 @@ class Welcome extends React.Component{
 
     render() {
         return (
-            <div>welcome</div>
+            <div>welcome to my home page</div>
         )
     }
 }
