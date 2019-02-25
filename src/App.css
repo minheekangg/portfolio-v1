@@ -1,33 +1,9 @@
-/* .App {
-  text-align: center;
+:root {
+  --mypurple: #C6ADDD; 
+  --mypink: #F4D8ED; 
+  --myorange: #ECA473;
+  --myblue: #556C9E;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-} */
-
-/* body{
-  align-content: center;
-  margin: 0 auto;
-  width: 80%;
-} */
 
 /* NAVBAR */
 #navbar{
@@ -55,6 +31,11 @@
   font-size: 30px;
   margin-right: 5%;
   color: grey;
+  text-decoration: none;
+}
+#navbar a:hover{
+  text-decoration: underline;
+  font-style: italic;
 }
 
 #navbar a:active{
@@ -62,32 +43,90 @@
 }
 /* NAVBAR */
 
+
+
 /* ABOUT PAGE */
+
 #about-page{
   display: flex;
+  /* background-color: lightgray; */
+  width: 80%;
+  margin: 0 auto;
+  /* background-color: var(--mypink); */
 }
 #my-pic{
   background-size: contain;
   width: 50vh;
   height: 40%;
-  /* background-color: blue; */
-  margin-left: 10vh;
+  /* margin-left: 10vh; */
   margin-top: 10vh;
 }
 #my-description{
-  width: 40%;
-  margin: 20vh;
-  font-size: 2.5vh;
-  display: none;
+  width: 80%;
+  margin-top: 10vh;
+  margin-left: 10vh;
+  /* font-size: 4vh; */
+  display: block;
   bottom: 0;
-  color: grey;
-  /* border-color: grey; */
+  color: var(--mypurple);
+  font-weight: bold;
+  cursor: pointer;
 }
 
-#my-pic:hover + #my-description{
-  display: block
+/* #my-description span{
+  bottom: 0;
+} */
+#bio{
+  font-size: 4vh;
+  cursor: pointer;
 }
-/* WELCOME PAGE */
+
+#bio-more{
+  display: block;
+  font-size: 2vh;
+  margin-top: 1vh;
+}
+/* #bio:hover+#bio-more{
+  display: block;
+  line-height: 130%;
+  font-size: 2vh;
+} */
+
+#experience{
+  margin-top: 2vh;
+  margin-bottom: 1vh;
+  text-align: left;
+  font-size: 3vh;
+  background-color: var(--myblue);
+  color: white;
+  padding-left: 1vh;
+  /* text-decoration: underline; */
+}
+
+#experience-extended{
+  color: var(--myblue);
+  font-size: 2vh;
+  cursor: cell;
+}
+
+#experience-extended #show{
+  display: none;
+}
+#experience-extended:hover{
+  border: .5vh;
+  color:var(--myblue);
+  padding: .5vh;
+  border: solid var(--myblue);
+  cursor: cell;
+}
+#experience-extended:hover #show{
+  display: block;
+  padding: .5vh;
+  /* background-color: purple; */
+  text-decoration: none;
+  cursor: cell;
+}
+
 
 
 /* WELCOME PAGE */
@@ -115,10 +154,12 @@
   font-size: 4vh;
   font-weight: normal;
   color: grey;
+  cursor: cell;
 }
 #single-skill-scroll:hover{
   /* text-decoration: underline; */
-  color: orangered
+  color: orangered;
+  font-style: italic;
 }
 /* #single-skill-scroll BOX{
   width: 10vh;
@@ -132,7 +173,9 @@
   font-size: 2vh;
   font-weight: bold;
 } */
+
 /* #single-skill-scroll:hover{
   font-weight: bold;
 } */
+
 /* WELCOME PAGE */
