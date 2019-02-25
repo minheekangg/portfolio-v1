@@ -2,21 +2,31 @@ import React from 'react';
 
 class Welcome extends React.Component{
     state = {
-        skills: ["Javascript", "Ruby on Rails", "React", "Redux", "HTML/CSS"]
+        skills: ["Javascript", "Ruby on Rails", "React", "Redux", "HTML/CSS", "Swift", "Github", "Sinatra"],
+        render: false 
     }
 
+    componentDidMount(){
+        setTimeout(()=>{
+            document.querySelector('#welcome').innerHTML = `Full Stack Web Developer <div id="skill-scroll"></div>`;
+        }, 500)
+        this.renderSkills()
+    }
+    
     renderSkills = () =>{
-        return this.state.skills.map(e=> {
-            return <div id="single-skill-scroll">
-                {e}
-            </div>
+        this.state.skills.map(e=> {
+            return setTimeout(()=>{
+                return document.querySelector('#skill-scroll').innerHTML += `<div id="single-skill-scroll">
+                + ${e}
+            </div>`
+            }, 1500)
+
         })
     }
 
-    render() {
-        return <div>welcome to my home page
-               <div id="skill-scroll">{this.renderSkills()}</div>
-            </div>
+    render() { 
+        return <div id="welcome">
+            </div> 
     }
 }
 
