@@ -203,7 +203,6 @@
   margin-top: 10%;
   width: 80%;
   margin: 0 auto;
-  height: 100vh;
 }
 #work-page h1{
   font-size: 7vh;
@@ -211,17 +210,12 @@
 }
 #project-container{
   width: 100%;
-  /* flex-direction: row; */
   display: inline-block;
 }
 #single-project{
-  /* border: solid grey; */
   display: inline-block;
   width: 40%;
-  height: 100%;
-  /* background-color: green; */
   margin: 4%;
-  /* padding: 4%; */
 }
 #single-project img{
   width: 100%
@@ -240,8 +234,7 @@
 }
 #single-selected-project{
   width: 100%;
-  height: 130vh;
-  /* background-color: blue; */
+  height: 100vh;
 }
 #project-container button{
   margin-left: -3%;
@@ -256,7 +249,7 @@
 }
 #single-selected-project iframe{
   width: 60%;
-  height: 40%;
+  height: 50%;
   /* margin-left: 5%; */
 }
 
