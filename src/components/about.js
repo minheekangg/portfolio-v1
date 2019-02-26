@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { Fragment} from 'react'
 import profile from '../images/paris.jpg'
 
 
 export default class About extends React.Component{
     state = {
         experience: [{ name: "Assistant Buyer", place: "SAKS FIFTH AVENUE OFF FIFTH + GILT (HBC)", time: "Aug 2017 - Oct 2018" }, { name: "Assistant Planner", place: "SAKS FIFTH AVENUE OFF FIFTH + GILT (HBC)", time: "Jul 2016 – Aug 2017" }, { name: "Merchandising Assistant", place: "SAKS FIFTH AVENUE OFF FIFTH + GILT (HBC)", time: "Mar 2015 – Jul 2016" }, { name: "Research Assistant", place: "HAVER ANALYTICS", time: "June 2014 – March 2015" } ],
-        education: [{ name: "Flatiron School", location: "NY, NY", degree: "Full Stack Web Development", time: "JAN 2018" }, { name: "Hunter College CUNY", location: "NY, NY", degree: "Bachelor of Arts in Economics, Media Studies Minor", time: "JAN 2015" }]
+        education: [{ name: "Flatiron School", location: "NY, NY", degree: "Full Stack Web Development", time: "JAN 2018" }, { name: "Hunter College CUNY", location: "NY, NY", degree: "Bachelor of Arts in Economics, Media Studies Minor", time: "JAN 2015" }],
+        loaded: false
 }
+
+componentDidMount() {
+        setTimeout(() => {
+            this.setState({loaded: true})
+        }, 1000)
+    }
 
     displayExperience =() =>{
         return this.state.experience.map(e=>{
@@ -29,17 +36,18 @@ export default class About extends React.Component{
 
 
     render(){
-        return(
-            <div id="about-page">
+        return(  <div id="about-page">
                  <img src={profile} id="my-pic" alt="my_pic"/>
                 <div id="my-description">
                     <span id="bio">
-                     Hi there! <br/>I am a fashion girl turned full stack web developer
+                        Hi there! <br />I am a NYC based <span>fashion girl </span>
+                         turned <span>full stack web developer.</span>
                     </span>
                     <span id="bio-more">
                           When I discovered how destructive the fashion industry had become with fast fashion, I sought out to find a home in an industry that builds rather than destroys. After going through Immersive Software Engineering Bootcamp, I am happy to say that I have now found the perfect career path for puzzle-loving, data-junkie, passionate, me.
                     </span>
                     <br/>
+                {this.state.loaded ? < Fragment>
                  <div id="experience" >
                     Experience
                  </div>
@@ -48,9 +56,9 @@ export default class About extends React.Component{
                     Education
                     </div>
                     {this.displayEducation()}
+                </Fragment> : null}</div>  
                  </div >
-                
-            </div>
+        
         )
     }
 }

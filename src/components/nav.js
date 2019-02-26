@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 class NavBar extends React.Component{
-
+    state = {active: 'welcome'}
     render() {
         return (
             <div id="navbar">

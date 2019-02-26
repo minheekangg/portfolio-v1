@@ -19,7 +19,7 @@ class Welcome extends React.Component{
                 return document.querySelector('#skill-scroll').innerHTML += `<div id="single-skill-scroll">
                 + ${e}
             </div>`
-            }, 1500)
+            }, 1000)
 
         })
     }

@@ -10,10 +10,11 @@
   width: 100%;
   /* flex-direction: row; */
   height: 10%;
+  background-color: rgb(248, 244, 244);
   
 }
 #navbar #title{
-  font-size: 70px;
+  font-size: 65px;
   text-align: left;
   width: 20%;
   position: sticky;
@@ -56,35 +57,40 @@
 }
 #my-pic{
   background-size: contain;
-  width: 50vh;
+  width: 48vh;
   height: 40%;
   /* margin-left: 10vh; */
   margin-top: 10vh;
+  border: solid var(--mypurple);
+  padding: 2vh;
 }
+
 #my-description{
   width: 80%;
-  margin-top: 10vh;
-  margin-left: 10vh;
+  margin: 10vh;
   /* font-size: 4vh; */
   display: block;
   bottom: 0;
-  color: var(--mypurple);
+  /* color: var(--mypurple); */
+  color: var(--myblue);
   font-weight: bold;
   cursor: pointer;
 }
 
-/* #my-description span{
-  bottom: 0;
-} */
 #bio{
   font-size: 4vh;
   cursor: pointer;
+}
+#bio:hover span{
+  font-weight: bolder;
+  /* color: var(--mypurple); */
 }
 
 #bio-more{
   display: block;
   font-size: 2vh;
   margin-top: 1vh;
+  font-style:italic;
 }
 /* #bio:hover+#bio-more{
   display: block;
@@ -100,7 +106,6 @@
   background-color: var(--myblue);
   color: white;
   padding-left: 1vh;
-  /* text-decoration: underline; */
 }
 
 #experience-extended{
@@ -179,3 +184,32 @@
 } */
 
 /* WELCOME PAGE */
+
+
+/* CONTACT PAGE */
+#contact{
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10%;
+  font-size: 3vh;
+  /* color: var(--myblue); */
+  /* display: inline; */
+}
+#contact h1{
+  text-decoration: underline;
+  text-decoration-color: var(--myorange);
+}
+#contact div{
+  color: var(--myorange);
+  font-weight: bold;
+  /* background-color: red; */
+}
+
+#contact a{
+  color: black;
+  text-decoration: none;
+  font-weight: normal;
+}
+#contact a:hover{
+  color: var(--myorange);
+}
