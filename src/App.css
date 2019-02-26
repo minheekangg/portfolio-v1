@@ -13,6 +13,7 @@
   background-color: rgb(248, 244, 244);
   position: sticky;
   top:0;
+  z-index: 2;
 }
 #navbar #title{
   font-size: 65px;
@@ -211,6 +212,7 @@
 #project-container{
   width: 100%;
   /* flex-direction: row; */
+  display: inline-block;
 }
 #single-project{
   /* border: solid grey; */
@@ -235,5 +237,42 @@
   display: none;
   color: var(--mypurple);
   font-weight: bold;
+}
+#single-selected-project{
+  width: 100%;
+  height: 130vh;
+  /* background-color: blue; */
+}
+#project-container button{
+  margin-left: -3%;
+  position: absolute;
+  /* display: none; */
+  width: 3%;
+  cursor: w-resize;
+  border:none;
+  color: var(--mypink);
+  font-size: 4vh;
+
+}
+#single-selected-project iframe{
+  width: 60%;
+  height: 40%;
+  /* margin-left: 5%; */
+}
+
+#single-description {
+  font-size: 3vh;
+  display: inline-block;
+  color: var(--mypink);
+  font-weight: bold;
+}
+#single-description-text{
+  /* margin-left: 5%; */
+  color: grey;
+  display: inline-block;
+  width: 100%;
+ /* background-color: purple; */
+ font-size: 2vh;
+ margin-top: 2vh;
 }
 /* WORK PAGE END */
