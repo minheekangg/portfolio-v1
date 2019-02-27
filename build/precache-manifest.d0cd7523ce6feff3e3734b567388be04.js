@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "24b0b5feb456d28895d0",
-    "url": "/static/css/main.1aa8a1fe.chunk.css"
+    "revision": "1991437f7448042671dd",
+    "url": "/static/css/main.d591819d.chunk.css"
   },
   {
-    "revision": "24b0b5feb456d28895d0",
-    "url": "/static/js/main.24b0b5fe.chunk.js"
+    "revision": "1991437f7448042671dd",
+    "url": "/static/js/main.1991437f.chunk.js"
   },
   {
     "revision": "fdfcfda2d9b1bf31db52",
     "url": "/static/js/runtime~main.fdfcfda2.js"
   },
   {
-    "revision": "a103437e4021ff025c32",
-    "url": "/static/js/2.a103437e.chunk.js"
+    "revision": "d63409321140b1f957b0",
+    "url": "/static/js/2.d6340932.chunk.js"
   },
   {
     "revision": "8a9b18a30ddc4706749ca1be2fb3cb13",
@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/static/media/paris.8a3e2054.jpg"
   },
   {
-    "revision": "8fb09e4678a443464861244a087e39eb",
+    "revision": "124af30dd7c2e686c10d3b2f53c5f22f",
     "url": "/index.html"
   }
 ];
