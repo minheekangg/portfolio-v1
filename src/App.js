@@ -10,7 +10,7 @@ import NavBar from './components/nav'
 
 class App extends Component {
   render() {
-
+    console.log("This is the process.env", process.env.REACT_APP_PULIC_URL)
     return <Fragment>
       <NavBar />
       <Switch>

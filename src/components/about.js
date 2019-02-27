@@ -9,15 +9,10 @@ export default class About extends React.Component{
         loaded: false
 }
 
-// componentDidMount() {
-//         setTimeout(() => {
-//             this.setState({loaded: true})
-//         }, 1000)
-//     }
 
     displayExperience =() =>{
         return this.state.experience.map(e=>{
-            return <div id="experience-extended">  + {e.name}
+            return <div id="experience-extended" key={e.name}>  + {e.name}
                 <span id="show">
                     {e.place} <br/> {e.time}
                 </span>
@@ -26,7 +21,7 @@ export default class About extends React.Component{
     }
     displayEducation =() =>{
         return this.state.education.map(e=>{
-            return <div id="experience-extended">  + {e.name}
+            return <div id="experience-extended" key={e.name}>  + {e.name}
                 <span id="show">
                     {e.degree} <br /> {e.location}<br/>{e.time}
                 </span>
