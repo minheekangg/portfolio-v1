@@ -9,13 +9,8 @@ import About from './components/about'
 import NavBar from './components/nav'
 
 class App extends Component {
-
-  const history = createHistory({
-    basename: process.env.PUBLIC_URL,
-  });
-  const store = configureStore({ history });
+  
   render() {
-    console.log("This is the process.env", process.env.REACT_APP_PULIC_URL)
     return <Fragment>
       <NavBar />
       <Switch>
