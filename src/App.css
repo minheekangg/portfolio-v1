@@ -25,10 +25,11 @@
 
 #navbar div{
   float: right;
-  padding-right: 3%;
   text-align: right;
   display: inline-block;
   margin-top: 2.5vh;
+  padding-right: 4%;
+  
 }
 #navbar a{
   font-size: 3vh;
