@@ -71,6 +71,7 @@
 #my-description{
   width: 80%;
   margin: 10vh;
+  padding-left: 5vh;
   /* font-size: 4vh; */
   display: block;
   bottom: 0;
@@ -290,7 +291,6 @@
     padding-left: 2vh;
   }
   #about-page{
-    display: block;
     /* margin: 0 auto; */
     margin: 0 auto;
 
@@ -316,6 +316,9 @@
   #single-project{
     width: 100%;
   }
+  #about-page{
+    display: block;
+  }
 }
 
 /* IPAD VERTICAL */
@@ -333,6 +336,7 @@
   #my-description{
     width: 100%;
   }
+  
 
 
   #welcome{
