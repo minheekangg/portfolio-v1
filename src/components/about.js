@@ -46,7 +46,6 @@ export default class About extends React.Component{
                     <span id="bio-more">
                           When I discovered how destructive the fashion industry had become with fast fashion, I sought out to find a home in an industry that builds rather than destroys. After going through Immersive Software Engineering Bootcamp, I am happy to say that I have now found the perfect career path for puzzle-loving, data-junkie, passionate, me.
                     </span>
-                    <br/>
                  <div id="experience" >
                     Experience
                  </div>

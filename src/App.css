@@ -25,10 +25,10 @@
 
 #navbar div{
   float: right;
-  margin-right: 5%;
+  padding-right: 3%;
   text-align: right;
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 2.5vh;
 }
 #navbar a{
   font-size: 3vh;
@@ -145,7 +145,7 @@
   padding-right: 2%;
   color: red;
   width: 100%;
-  height: 70%;
+  height: 100%;
   margin: 0 auto;
   position: absolute;
   background-color: lavender;
@@ -160,7 +160,7 @@
   width: 50%;
   /* margin-top: 5%; */
   overflow: scroll;
-  font-size: 4vh;
+  font-size: 5vh;
   font-weight: normal;
   color: grey;
   cursor: cell;
@@ -178,7 +178,7 @@
 #contact{
   width: 80%;
   margin: 0 auto;
-  margin-top: 10%;
+  margin-top: 15%;
   font-size: 3vh;
   /* color: var(--myblue); */
   /* display: inline; */
@@ -215,12 +215,16 @@
 #project-container{
   width: 100%;
   display: inline-block;
+  overflow: auto;
 }
 #single-project{
   display: inline-block;
   vertical-align: top;
   width: 40%;
-  margin: 4%;
+  /* padding: 4%; */
+  padding-top: 4%;
+  padding-right: 10%;
+  padding-bottom: 6%;
   /* border: solid red; */
 }
 #single-project img{
@@ -300,6 +304,11 @@
     margin-left: 1vh;
     /* margin-right: 6vh; */
   }
+
+  #navbar div{
+    /* margin-top: 1vh; */
+    font-size: 2.5vh;
+  }
 }
 @media(max-width: 1300px){
   #single-project{
@@ -309,27 +318,45 @@
 
 /* IPAD VERTICAL */
 @media(max-width: 1025px){
-  #title{
+  #navbar{
+    padding-right: .5vh;
+  }
+  #navbar #title{
     font-size: 4vh;
   }
-  #title div{
-    padding-right: 2vh;
+  #navbar div{
+    font-size: .5vh;
+    margin-top: 1vh;
   }
   #my-description{
     width: 100%;
   }
+
+
+  #welcome{
+    padding-left: 2vh;
+    padding-right: 2vh;
+    width: 100%;
+    padding-top: 20%;
+    height: 100%;
+  }
+
+  #skill-scroll{
+    float: right;
+  }
+
 }
 
 /* PHONE HORIZONTAL */
 @media(max-width: 850px){
-  #nav-bar div{
-    font-size: 1vh;
-    left: 0;
-    color:red;
-    float: right;
-    margin-right: 5%;
-    text-align: right;
-    display: inline-block;
+
+
+  #welcome{
+    padding-top: 12%;
+    padding-left: 10%;
+  }
+  #contact{
+    margin-top: 10%;
   }
   
 }
