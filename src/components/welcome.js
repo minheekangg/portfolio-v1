@@ -2,7 +2,7 @@ import React from 'react';
 
 class Welcome extends React.Component{
     state = {
-        skills: ["Javascript", "Ruby on Rails", "React", "Redux", "HTML/CSS", "Swift", "Github", "Sinatra"],
+        skills: ["Javascript", "Ruby on Rails", "React", "Redux", "HTML/CSS", "Github", "Sinatra"],
         render: false 
     }
 
