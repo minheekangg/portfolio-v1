@@ -144,7 +144,7 @@
   padding-left: 5%;
   padding-right: 2%;
   color: red;
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
   margin: 0 auto;
   position: absolute;
@@ -353,10 +353,56 @@
 
   #welcome{
     padding-top: 12%;
-    padding-left: 10%;
+    /* padding-left: 10%; */
   }
   #contact{
     margin-top: 10%;
+  }
+  
+}
+/* PHONE VERTICAL */
+@media(max-width: 450px){
+
+  #navbar div{
+    float: inline-block;
+    margin-top: 2vh;
+    padding-right: 2vh;
+    overflow: auto;
+    margin-left: 3vh;
+    
+  }
+  #navbar a{
+    margin-right: 1vh;
+    font-size: 2vh;
+    text-decoration: underline;
+    text-decoration-color: red;
+  }
+  #navbar{
+    height: 10vh;
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+  }
+
+  #welcome{
+    padding-top: 20%;
+    font-size: 7vh;
+    overflow: auto;
+  }
+  #single-skill-scroll{
+    font-size: 3vh;
+  }
+  #skill-scroll{
+    padding-right:10%;
+  }
+  #my-pic{
+    width: 80%;
+  }
+  #contact{
+    margin-top: 20%;
+  }
+  #contact ul{
+    font-size: 2vh;
   }
   
 }
