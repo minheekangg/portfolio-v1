@@ -334,7 +334,7 @@
     margin-top: 1vh;
   }
   #my-description{
-    width: 100%;
+    margin-right: 4vh;
   }
   
 
@@ -355,7 +355,10 @@
 
 /* PHONE HORIZONTAL */
 @media(max-width: 850px){
-
+  #my-description{
+    margin-left: -3vh;
+  }
+  
 
   #welcome{
     padding-top: 12%;
