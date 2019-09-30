@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import './App.css';
+import './App.scss';
 import { Route, Switch, Redirect, withRouter } from "react-router-dom";
 
 import Welcome from './components/welcome'

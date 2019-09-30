@@ -1,32 +1,23 @@
 import React from 'react';
 
 class Welcome extends React.Component{
-    state = {
-        skills: ["Javascript", "Ruby on Rails", "React", "Redux", "HTML/CSS", "Github", "Sinatra"],
-        render: false 
-    }
-
-    componentDidMount(){
-        setTimeout(()=>{
-            document.querySelector('#welcome').innerHTML = `Full Stack Web Developer <div id="skill-scroll"></div>`;
-        }, 500)
-        this.renderSkills()
-    }
-    
-    renderSkills = () =>{
-        this.state.skills.map(e=> {
-            return setTimeout(()=>{
-                return document.querySelector('#skill-scroll').innerHTML += `<div id="single-skill-scroll">
-                + ${e}
-            </div>`
-            }, 1000)
-
-        })
-    }
 
     render() { 
-        return <div id="welcome">
-            </div> 
+        return (
+            <div className="welcome">
+                Full Stack Web Developer 
+                <div className="skill-scroll">
+                    <div className="single-skill-scroll">+Javascript</div>
+                    <div className="single-skill-scroll">+Ruby on Rails</div>
+                    <div className="single-skill-scroll">+React</div>
+                    <div className="single-skill-scroll">+Redux</div>
+                    <div className="single-skill-scroll">+HTML/CSS</div>
+                    <div className="single-skill-scroll">+NodeJS</div>
+                    <div className="single-skill-scroll">+MongoDB</div>
+                    <div className="single-skill-scroll">+Github</div>
+                </div>
+            </div>
+        ) 
     }
 }
 

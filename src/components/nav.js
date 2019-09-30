@@ -5,8 +5,8 @@ class NavBar extends React.Component{
     state = {active: 'welcome'}
     render() {
         return (
-            <div id="navbar">
-                <span id="title">minhee kang</span>
+            <div className="navbar">
+                <span className="title">mhp</span>
                 <div>
                     <Link to="/welcome" >welcome</Link> 
                     <Link to="/work" >work</Link>

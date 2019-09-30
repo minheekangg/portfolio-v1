@@ -29,7 +29,6 @@ export default class Work extends React.Component{
     }
 
     selectProject = (event)=>{
-        console.log(event.target.parentElement)
        return event.target.parentElement.id === "single-project" ? this.setState({selected: event.target.parentElement.dataset.id}, ()=>{
                 console.log(this.state.selected)
             })
@@ -40,27 +39,27 @@ export default class Work extends React.Component{
 
     renderProjects = () =>{
         return this.state.projects.map(e=>{
-            return <div id="single-project" onClick={()=>this.setState({selected: e.name})} key={e.name} data-id={e.name}>
+            return <div className="single-project" onClick={()=>this.setState({selected: e.name})} key={e.name} data-className={e.name}>
             <img src={e.image} alt={e.name}/>
                 <span>{e.name}</span>
-                <div id="stack">{e.stack}</div>
+                <div className="stack">{e.stack}</div>
             </div>
         })
     }
 
     renderSingleProject = () =>{
         let foundProject = this.state.projects.find(e=> e.name === this.state.selected)
-        return <div id="single-selected-project" key={foundProject.name}> 
-            <iframe id="video" width="100%" height="100%" src={foundProject.video} frameBorder="0" title={foundProject.name} allowFullScreen></iframe> <button>X</button>
-            <div id="single-description">
+        return <div className="single-selected-project" key={foundProject.name}> 
+            <iframe className="video" width="100%" height="100%" src={foundProject.video} frameBorder="0" title={foundProject.name} allowFullScreen></iframe> <button>X</button>
+            <div className="single-description">
                 <div style={{fontWeight: "bold"}}>
                     {foundProject.name} 
                 </div>
                 <div style={{ fontStyle: "italic"}}>{foundProject.stack.toUpperCase()}</div> 
                 
-                <div id="single-description-text">DESCRIPTION: </div>
+                <div className="single-description-text">DESCRIPTION: </div>
                  {foundProject.description.map(e=>{
-                    return <span id="single-description-text" key={e}>{e} </span>
+                    return <span className="single-description-text" key={e}>{e} </span>
                 })}
                 
             </div>
@@ -70,10 +69,10 @@ export default class Work extends React.Component{
 
     render() {
         return (
-            <div id="work-page">
-                {this.state.selected !== '' ? <div id="project-container" style={{marginTop: "3%"}}onClick={e => this.selectProject(e)}>         
+            <div className="work-page">
+                {this.state.selected !== '' ? <div className="project-container" style={{marginTop: "3%"}}onClick={e => this.selectProject(e)}>         
                  {this.renderSingleProject()}
-                </div>  : <div><h1>Projects</h1><div id="project-container" onClick={e=>this.selectProject(e)}> {this.renderProjects()}
+                </div>  : <div><h1>Projects</h1><div className="project-container" onClick={e=>this.selectProject(e)}> {this.renderProjects()}
                 </div></div> }
             </div>
         )
