@@ -1,8 +1,8 @@
 import React from 'react'
 
-import capsule2 from '../images/projects/capsule2.png'
-import capsule1 from '../images/projects/capsule1.png'
-import korean101 from '../images/projects/korean101.png'
+import capsule2 from '../../images/projects/capsule2.png'
+import capsule1 from '../../images/projects/capsule1.png'
+import korean101 from '../../images/projects/korean101.png'
 
 export default class Work extends React.Component{
     state = {
