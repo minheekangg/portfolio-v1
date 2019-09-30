@@ -5,7 +5,8 @@ class Welcome extends React.Component{
     render() { 
         return (
             <div className="welcome">
-                Full Stack Web Developer 
+                <h1>Minhee Park</h1>
+                <h2>Full Stack Web Developer</h2>
                 <div className="skill-scroll">
                     <div className="single-skill-scroll">+Javascript</div>
                     <div className="single-skill-scroll">+Ruby on Rails</div>

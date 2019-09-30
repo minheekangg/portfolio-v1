@@ -3,8 +3,9 @@ import React from 'react'
 import capsule2 from '../../images/projects/capsule2.png'
 import capsule1 from '../../images/projects/capsule1.png'
 import korean101 from '../../images/projects/korean101.png'
+import Project from './project';
 
-export default class Work extends React.Component{
+export default class Projects extends React.Component{
     state = {
         projects: [{
             name: "capsule wardrobe two.",
@@ -28,52 +29,37 @@ export default class Work extends React.Component{
         selected: ''
     }
 
-    selectProject = (event)=>{
-       return event.target.parentElement.id === "single-project" ? this.setState({selected: event.target.parentElement.dataset.id}, ()=>{
-                console.log(this.state.selected)
-            })
-           : this.setState({ selected: '' }, () => {
-               console.log(this.state.selected)
-           })
-    }
-
-    renderProjects = () =>{
-        return this.state.projects.map(e=>{
-            return <div className="single-project" onClick={()=>this.setState({selected: e.name})} key={e.name} data-className={e.name}>
-            <img src={e.image} alt={e.name}/>
-                <span>{e.name}</span>
-                <div className="stack">{e.stack}</div>
-            </div>
-        })
+    selectProject = (event) =>{ 
+       return event.target.parentElement.className === "single-project" 
+            ? this.setState({selected: event.target.parentElement.dataset.id})
+            : this.setState({ selected: '' })
     }
 
     renderSingleProject = () =>{
-        let foundProject = this.state.projects.find(e=> e.name === this.state.selected)
-        return <div className="single-selected-project" key={foundProject.name}> 
-            <iframe className="video" width="100%" height="100%" src={foundProject.video} frameBorder="0" title={foundProject.name} allowFullScreen></iframe> <button>X</button>
-            <div className="single-description">
-                <div style={{fontWeight: "bold"}}>
-                    {foundProject.name} 
-                </div>
-                <div style={{ fontStyle: "italic"}}>{foundProject.stack.toUpperCase()}</div> 
-                
-                <div className="single-description-text">DESCRIPTION: </div>
-                 {foundProject.description.map(e=>{
-                    return <span className="single-description-text" key={e}>{e} </span>
-                })}
-                
-            </div>
-        </div>
+        let foundProject = this.state.projects.find(e=> e.name === this.state.selected);
+
+        return <Project name={foundProject.name} video={foundProject.video} stack={foundProject.stack} description={foundProject.description}/>
     }
 
 
     render() {
         return (
             <div className="work-page">
-                {this.state.selected !== '' ? <div className="project-container" style={{marginTop: "3%"}}onClick={e => this.selectProject(e)}>         
-                 {this.renderSingleProject()}
-                </div>  : <div><h1>Projects</h1><div className="project-container" onClick={e=>this.selectProject(e)}> {this.renderProjects()}
-                </div></div> }
+                { this.state.selected !== '' 
+                    ? this.renderSingleProject()
+                    : <div>
+                        <h1>Projects</h1>
+                            <div className="project-container" onClick={e => this.selectProject(e)}> {this.state.projects.map(e => {
+                                return (
+                                    <div className="single-project" onClick={() => this.setState({ selected: e.name })} key={e.name} data-id={e.name}>
+                                        <img src={e.image} alt={e.name} />
+                                        <span>{e.name}</span>
+                                        <div className="stack">{e.stack}</div>
+                                    </div>
+                                )
+                                })}
+                        </div>
+                    </div> }
             </div>
         )
     }

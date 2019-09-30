@@ -15,9 +15,11 @@ class App extends Component {
       <Fragment>
         <NavBar />
         <Welcome />
-        <Projects/>
-        <About />
-        <Contact/>
+        <div className="maxwidth-page">
+          <About />
+          <Projects/>
+          <Contact/>
+        </div>
         {/* <Switch>
           <Route exact path="/" render={() => <Redirect to="/welcome" />} />
           <Route exact path="/welcome" component={Welcome} />

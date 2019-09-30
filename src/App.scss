@@ -5,35 +5,37 @@
   $blue: #556C9E;
   $background-grey: rgb(243, 244, 244);
 
+.maxwidth-page{
+  padding: 0 10px;
+  border: 1px solid red;
+}
+
 /* NAVBAR */
 .navbar{
   position: sticky;
   width: 100%;
-  height: 10%;
   background-color: $background-grey;
   position: sticky;
   top:0;
   z-index: 2;
 }
 .navbar .title{
-  font-size: 6vh;
+  font-size: 25px;
   text-align: left;
-  width: 20%;
+  padding: 10px 10px 10px;
   color: grey;
 }
 
 .navbar div{
   float: right;
   text-align: right;
-  margin-top: 2.5vh;
-  margin-right: 4%;
   
 }
 .navbar a{
-  font-size: 3vh;
-  margin-right: 5%;
+  font-size: 15px;
+  line-height: 30px;
+  padding: 10px;
   color: grey;
-  text-decoration: none;
 }
 .navbar a:hover{
   text-decoration: underline;
@@ -139,29 +141,23 @@
 
 /* WELCOME PAGE */
 .welcome{
-  font-size: 10vh;
-  padding-top: 15%;
-  padding-left: 5%;
-  padding-right: -5%;
-  color: red;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
-  position: absolute;
+  height: 100vh;
+  padding: 20px;
   background-color: lavender;
-  font-weight: bold;
-  overflow: auto;
+  h1 {
+    line-height: 40vh;
+    font-weight: bold;
+    font-size: 30px;
+    visibility: hidden;
+  }
+  h2 {
+    color: red;
+
+  }
 }
 .skill-scroll{
-  overflow: hidden;
-  display: inline-block;
-  /* float: right; */
-  bottom: 0;
-  margin-left: 60%;
   width: 50%;
-  /* margin-top: 5%; */
-  overflow: scroll;
-  font-size: 5vh;
+  font-size: 20px;
   font-weight: normal;
   color: grey;
   cursor: cell;
@@ -282,134 +278,3 @@
  margin-top: 2vh;
 }
 /* WORK PAGE END */
-
-@media(max-width: 1500px){
-  .title {
-    padding-right: 2vh;
-    padding-left: 2vh;
-  }
-  .about-page{
-    /* margin: 0 auto; */
-    margin: 0 auto;
-
-  }
-  .my-pic{
-    width: 50vh;
-    justify-content: center;
-    margin-left: 1vh;
-    /* margin-right: 6vh; */
-    /* background-color: black; */
-  }
-  .my-description{
-    margin-left: 1vh;
-    /* margin-right: 6vh; */
-  }
-
-  .navbar div{
-    /* margin-top: 1vh; */
-    font-size: 2.5vh;
-  }
-}
-@media(max-width: 1300px){
-  .single-project{
-    width: 100%;
-  }
-  .about-page{
-    display: block;
-  }
-}
-
-/* IPAD VERTICAL */
-@media(max-width: 1025px){
-  .navbar{
-    padding-right: .5vh;
-  }
-  .navbar .title{
-    font-size: 4vh;
-  }
-  .navbar div{
-    font-size: .5vh;
-    margin-top: 1vh;
-  }
-  .my-description{
-    margin-right: 4vh;
-  }
-  
-
-
-  .welcome{
-    padding-left: 2vh;
-    padding-right: 2vh;
-    width: 100%;
-    padding-top: 20%;
-    height: 100%;
-  }
-
-  .skill-scroll{
-    float: right;
-  }
-
-}
-
-/* PHONE HORIZONTAL */
-@media(max-width: 850px){
-  .my-description{
-    margin-left: -3vh;
-  }
-  
-
-  .welcome{
-    padding-top: 12%;
-    /* padding-left: 10%; */
-  }
-  .contact{
-    margin-top: 10%;
-  }
-  
-}
-/* PHONE VERTICAL */
-@media(max-width: 450px){
-
-  .navbar div{
-    float: inline-block;
-    margin-top: 2vh;
-    padding-right: 2vh;
-    overflow: auto;
-    margin-left: 3vh;
-    
-  }
-  .navbar a{
-    margin-right: 1vh;
-    font-size: 2vh;
-    text-decoration: underline;
-    text-decoration-color: red;
-  }
-  .navbar{
-    height: 10vh;
-    position: sticky;
-    position: -webkit-sticky;
-    top:0;
-  }
-
-  .welcome{
-    padding-top: 20%;
-    font-size: 7vh;
-    overflow: auto;
-  }
-  .single-skill-scroll{
-    font-size: 3vh;
-  }
-  .skill-scroll{
-    padding-right:10%;
-  }
-  .my-pic{
-    width: 80%;
-  }
-  .contact{
-    margin-top: 20%;
-  }
-  .contact ul{
-    font-size: 2vh;
-  }
-  
-}
